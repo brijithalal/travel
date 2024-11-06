@@ -1,0 +1,293 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0d0d0;
+    
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: #050506;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #050506;
+    color: white;
+    padding: 15px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 9px;
+    align-items: center;
+}
+
+.navbar .navbar-links a,
+.navbar .logout-btn {
+    color: rgb(16, 14, 14);
+    text-decoration: none;
+    margin-left: 20px;
+    /* background-color: #000000; */
+}
+.navbar .navbar-links a:hover{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+
+.navbar .logout-btn {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+
+}
+
+/* Form container */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(21, 16, 16, 0.8);
+    /* box-shadow: 0 0 10px rgba(230, 227, 227, 0.8); */
+}
+
+/* Success message */
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+
+
+/* Page Title */
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Filter Buttons */
+div button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+div button:hover {
+    background-color: #ddd;
+}
+
+div button:active {
+    background-color:  #007BFF;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #000000;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td button {
+    padding: 6px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+td button:hover {
+    background-color: #0056b3;
+}
+
+td button:active {
+    background-color: #004085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar .navbar-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .navbar .logout-btn {
+        margin-top: 10px;
+        background-color: #000000;
+    }
+    .logout-btn{
+        background-color: #000000;
+
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+
+.filter-section {
+    margin-bottom: 20px;
+    /* margin-left: 700px; */
+}
+
+/* .filter-section select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+} */
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjusts the spacing between items */
+    margin-bottom: 20px;
+}
+.filter-section {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjusts spacing between the label and select */
+}
+
+.filter-section label {
+    margin-right: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#priorityFilter {
+    width: 150px; /* Adjust this value for width */
+    height: 35px; /* Adjust this value for height */
+    font-size: 16px; /* Adjusts the font size for better readability */
+    padding: 5px; /* Adds some padding for better visual appearance */
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.alert-item {
+    margin-bottom: 10px; /* Adds space between each item */
+}
+
+.custom-alert-content p {
+    margin: 0; /* Ensures paragraphs don't add extra space if used */
+}
+
+.custom-alert-content {
+    position: relative;
+    text-align: left;
+    padding: 15px;
+}
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+#okButton{
+    background-color: #007BFF;
+}
+#okButton:hover{
+    background-color: black;
+    color: white;
+}

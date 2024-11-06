@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Travel Requests</title>
+    <link rel="stylesheet" href="../css/userview.css">
+</head>
+<body>
+    <div id="customAlert" class="custom-alert">
+        <div class="custom-alert-content">
+            <span id="closeAlertBtn" class="close-btn">&times;</span>
+            <h3>Request Details</h3>
+            <p id="alertMessage">Details will be displayed here</p>
+            <button id="okButton">OK</button>
+        
+        </div>
+    </div>
+
+   
+    
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="container">
+            <h1>Travel Requestor</h1>
+            <div class="navbar-links">
+                <a href="travelrequest.html">Form</a>
+                <a href="userviewtravel.html">View Requests</a>
+               
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Travel Requests</h2>
+        <!-- Dropdown for filtering by priority -->
+        <div class="filter-section">
+            <label for="priorityFilter">Priority:</label>
+            <select id="priorityFilter" onchange="filterRequestsByPriority()">
+                <option value="all">All</option>
+                <option value="critical">Critical</option>
+                <option value="normal">Normal</option>
+                <!-- <option value="rejected">Rejected</option> -->
+            </select>
+        </div>
+
+    
+        <!-- Filter by status -->
+        <div class="filter-container">
+            <button onclick="filterRequests('pending')">Pending</button>
+            <button onclick="filterRequests('approved')">Approved</button>
+            <button onclick="filterRequests('rejected')">Rejected</button>
+            <button onclick="filterRequests('OnHold')">OnHold</button>
+            
+            
+        </div>
+        <!-- <select>
+            <option>Critical</option>
+            <option>Normal</option>
+            <option>Rejected</option>
+        </select>
+         -->
+        
+        <!-- Travel requests table -->
+        <table id="requestsTable">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Destination</th>
+                    <th>Project</th>
+                    <th>Priority</th>
+                    <th>View </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Requests will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/userview1.js"></script>
+</body>
+</html>

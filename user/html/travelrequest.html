@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Travel Request System</title>
+    <link rel="stylesheet" href="../css/travelrequest.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1>Travel Requestor</h1>
+            <div class="navbar-links">
+                <a href="travelrequest.html">Form</a>
+                <a href="userviewtravel.html">View Requests</a>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Travel Request Form</h2>
+        <form id="travelRequestForm">
+            <div class="form-group">
+                <label for="empId">Employee ID</label>
+                <input type="text" id="empId" placeholder="Enter Employee ID" required>
+            </div>
+            <div class="form-group">
+                <label for="empName">Employee Name</label>
+                <input type="text" id="empName" placeholder="Enter Employee Name" required>
+            </div>
+            <div class="form-group">
+                <label for="project">Project</label>
+                <input type="text" id="project" placeholder="Enter Project Name" required>
+            </div>
+            <div class="form-group">
+                <label for="cause">Cause for Travel</label>
+                <input type="text" id="cause" placeholder="Causefor travel" required>
+            </div>
+            <div class="form-group">
+                <label for="source">Source</label>
+                <input type="text" id="source" placeholder="Source" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" placeholder="Destination" required>
+            </div>
+            <div class="form-group">
+                <label for="fromDate">From Date</label>
+                <input type="date" id="fromDate" required>
+            </div>
+            <div class="form-group">
+                <label for="noOfDays">Number of Days</label>
+                <input type="number" id="noOfDays" placeholder="Enter number of days" required>
+            </div>
+            <div class="form-group">
+                <label for="modeOfTravel">Mode of Travel</label>
+                <input type="text" id="modeOfTravel" required>
+            </div>
+            <!-- Priority Dropdown -->
+            <div class="form-group">
+                <label for="priority">Priority</label>
+                <select id="priority" required>
+                    <option value="">Select Priority</option>
+                    <option value="Critical">Critical</option>
+                    <option value="Normal">Normal</option>
+                    <!-- <option value="Rejected">Rejected</option> -->
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+            <p id="requestMessage" class="success-message"></p>
+        </form>
+    </div>
+
+    <script src="../js/travelrequest.js"></script>
+</body>
+</html>
